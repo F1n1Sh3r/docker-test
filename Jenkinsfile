@@ -38,6 +38,16 @@ pipeline {
       }
     }
 
+    stage('Orchestrate')
+    {
+        steps{
+            script{
+        sh 'kubectl create -f */user-service.yml'
+        sh 'kubectl apply -f */user-service.yml'
+            }
+        }
+    }
+
   }
 
 }
