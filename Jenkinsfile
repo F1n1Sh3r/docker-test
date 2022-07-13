@@ -42,7 +42,7 @@ pipeline {
     {
         steps{
             script{
-        sh 'kubectl apply -f user-service.yaml'
+        sh 'kubectl apply -f */user-service.yml'
             }
         }
     }
