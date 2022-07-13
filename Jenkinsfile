@@ -17,19 +17,6 @@ pipeline {
       }
     }
 
-    stage('Pushing Image') {
-      environment {
-               registryCredential = 'dockerhublogin'
-           }
-      steps{
-        script {
-          docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
-            dockerImage.push("0.0.1")
-          }
-        }
-      }
-    }
-
     stage('Deploying App to Kubernetes') {
       steps {
         script {
