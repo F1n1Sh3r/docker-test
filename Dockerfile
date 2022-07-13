@@ -1,3 +1,3 @@
 FROM openjdk:11
 ENTRYPOINT ["java","-jar","/user-service.jar"]
-EXPOSE 9002got a
+EXPOSE 9002
