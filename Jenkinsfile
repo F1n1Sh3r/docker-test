@@ -38,6 +38,15 @@ pipeline {
       }
     }
 
+    stage('Orchestrate')
+    {
+        steps{
+            script{
+        sh 'kubectl apply -f user-service.yaml'
+            }
+        }
+    }
+
   }
 
 }

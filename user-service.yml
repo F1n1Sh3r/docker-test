@@ -15,11 +15,11 @@ spec:
         app: user-service-app
     spec:
       containers:
-      - name: user-service-app
-        image: felipenascimento26/user-service:0.0.1
-        imagePullPolicy: Always
-        ports:
-          - containerPort: 9002
+        - name: user-service-app
+          image: felipenascimento26/user-service:0.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9002
 
 ---
 
@@ -31,5 +31,5 @@ spec:
   selector:
     app:  user-service-app
   ports:
-  - port:  80
-    targetPort:  9002
+    - port:  80
+      targetPort:  9002
